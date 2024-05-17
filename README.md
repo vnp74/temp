@@ -14,8 +14,34 @@ Tomcat (version 9.0 or higher) Setup Instructions
 ### Clone the Repository
 
 Open your terminal or command prompt. Clone the repository to your local
-machine using the following command: bash Copy code git clone
-https://github.com/vnp74/temp.git 
+machine using the following command: bash Copy code <br>
+
+<div>
+  <button onclick="copyToClipboard('#code-snippet')"></button>
+</div>
+<pre id="code-snippet"><code>git clone https://github.com/vnp74/temp.git</code></pre>
+
+<script>
+  function copyToClipboard(element) {
+    var range, selection, worked;
+    if (document.createRange) {
+      range = document.createRange();
+      range.selectNode(document.querySelector(element));
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        worked = document.execCommand('copy');
+      } catch (err) {
+        worked = false;
+      }
+      if (worked) {
+        alert('Copied to clipboard!');
+      }
+    }
+  }
+</script>
+
 
 Navigate to the project directory:
 bash Copy code cd your-repository Import the Project into NetBeans
@@ -56,8 +82,8 @@ and open it in your default web browser.
 
 If you wish to contribute to this project, please follow these steps:
 
-Fork the repository. 
-Create a new branch. 
-Commit your changes (git commit -m \'Add some feature\').
-Push to the branch (git push origin feature/your-feature).
+Fork the repository. <br>
+Create a new branch. (Name the branch on your name). <br>
+Commit your changes (git commit -m \'Add some feature\'). <br>
+Push to the branch (git push origin feature/your-feature). <br>
 Open a pull request.
